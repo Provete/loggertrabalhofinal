@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.ObjectWriter;
 
 public class JSONLogger implements Logger
 {
-    String caminhoArquivo = "logs/logs.json";
+    private String caminhoArquivo = "logs/logs.json";
 
 
     @Override

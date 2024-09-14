@@ -11,7 +11,7 @@ import org.apache.commons.csv.*;
 
 public class CSVLogger implements Logger
 {
-    String caminhoArquivo = "logs/logs.csv";
+    private String caminhoArquivo = "logs/logs.csv";
 
     @Override
     public void log(Operacao operacao, String nomeUsuario, LocalDateTime dataEHora, String nomeUsuarioAutenticado)
