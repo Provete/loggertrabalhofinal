@@ -5,6 +5,7 @@ import java.time.format.DateTimeFormatter;
 
 public class LogEntry
 {
+    private String mensagemErro;
     private String operacao;
     private String nomeUsuario;
     private String data;
@@ -22,8 +23,17 @@ public class LogEntry
         this.hora = dataEHora.format(LogEntry.formatadorHora);
         this.nomeUsuarioAutenticado = nomeUsuarioAutenticado;
     }
-
     public LogEntry(){}
+
+    public LogEntry(String mensagemErro, Operacao operacao, String nomeUsuario, LocalDateTime dataEHora, String nomeUsuarioAutenticado)
+    {
+        this.mensagemErro = mensagemErro;
+        this.operacao = operacao.getNomeFormatado();
+        this.nomeUsuario = nomeUsuario;
+        this.data = data;
+        this.hora = hora;
+        this.nomeUsuarioAutenticado = nomeUsuarioAutenticado;
+    }
 
     public String getOperacao()
     {
@@ -73,5 +83,10 @@ public class LogEntry
     public void setHora(String hora)
     {
         this.hora = hora;
+    }
+
+    public String getMensagemErro()
+    {
+        return mensagemErro;
     }
 }
