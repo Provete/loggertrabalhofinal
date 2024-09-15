@@ -45,9 +45,10 @@ public class CSVLogger implements Logger
                     logEntry.getNomeUsuario(),
                     logEntry.getData(),
                     logEntry.getHora(),
-                    logEntry.getNomeUsuarioAutenticado(),
-                    "\n"
+                    logEntry.getNomeUsuarioAutenticado()
             );
+
+            writer.write('\n');
 
             printer.flush();
         } catch (Exception e)
@@ -90,10 +91,9 @@ public class CSVLogger implements Logger
                     logEntry.getNomeUsuario(),
                     logEntry.getData(),
                     logEntry.getHora(),
-                    logEntry.getNomeUsuarioAutenticado(),
-                    "\n"
+                    logEntry.getNomeUsuarioAutenticado()
             );
-
+            writer.write('\n');
             printer.flush();
         } catch (Exception e)
         {
